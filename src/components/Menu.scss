@@ -1,0 +1,135 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.main-menu {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ // width: 40%;
+ // width: 250px;
+ max-width: 280px;
+ height: 235px;
+ margin: 0.5rem auto;
+ border-radius: 30px;
+ padding: 0em 1.5em 0em 1.5em;
+ box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+ font-family: $--ff-text;
+ text-align: center;
+ position: relative;
+ background-image: linear-gradient(120deg,
+   $--backgrd-clr-2,
+   $--backgrd-clr-1);
+
+ .budget-title {
+  display: block;
+  background-image: linear-gradient(120deg,
+    $--backgrd-clr-3,
+    $--backgrd-clr-4);
+  padding: 0.4em 0.25em;
+  border-radius: 10px;
+  margin-bottom: 0.5em;
+  font-size: 1.3rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  width: 200px;
+  overflow: hidden;
+ }
+
+ .budget-remaining {
+  width: 70%;
+  background-image: linear-gradient(120deg,
+    $--backgrd-clr-2,
+    $--backgrd-clr-5);
+  padding: 0.3em;
+  border-radius: 10px;
+  font-family: var(--ff-text);
+  font-size: 2rem;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+ }
+
+ .budget-spend,
+ .budget-base {
+  width: 40%;
+  background-image: linear-gradient(120deg,
+    $--backgrd-clr-5,
+    $--backgrd-clr-2);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: var(--ff-text);
+  font-size: 1rem;
+  margin: 0 auto;
+ }
+
+ .budget-base {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 1.1rem;
+ }
+
+ .btn-edit-title,
+ .btn-edit-base,
+ .btn-delete-classlist {
+  @include buttonBase;
+  position: absolute;
+  right: 0.6rem;
+  background-image: linear-gradient(120deg,
+    $--backgrd-clr-3,
+    $--backgrd-clr-4);
+  height: 40px;
+  width: 40px;
+  transition: all 0.5s ease;
+
+  &:hover {
+   color: $--backgrd-clr-4;
+   background-image: none;
+   background-color: $--backgrd-clr-7;
+  }
+ }
+
+ /////////////////////////////////////////////
+ /* BUTTONS POSITIONS */
+ /////////////////////////////////////////////
+
+ .btn-edit-title {
+  top: 1rem;
+ }
+
+ .btn-edit-base {
+  top: 6.2rem;
+ }
+
+ .btn-delete-classlist {
+  top: 11.4rem;
+  background-image: linear-gradient(120deg,
+    $--backgrd-clr-3,
+    $--backgrd-clr-6);
+
+  &:hover {
+   background-image: linear-gradient(120deg,
+     $--backgrd-clr-6,
+     $--backgrd-clr-3);
+   color: red;
+  }
+ }
+
+ .btn-shopping {
+  @include buttonBase;
+  font-size: 1.5rem;
+  padding: 0.25em 1em;
+  border-radius: 10px;
+  margin: 1em 0em 1em;
+  background-color: $--backgrd-clr-2;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+
+  &:hover {
+   color: $--backgrd-clr-2;
+   background-color: $--backgrd-clr-7;
+   transition: all 0.25s ease;
+  }
+ }
+
+ .WheelButtons {
+  top: 1rem;
+  left: 0.1rem;
+ }
+}

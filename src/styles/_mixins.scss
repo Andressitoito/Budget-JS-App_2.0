@@ -1,0 +1,21 @@
+@import '../styles/variables';
+
+.Link {
+ text-decoration: none;
+}
+
+@mixin buttonBase {
+ font-size: 1.2rem;
+ padding: 0.5em;
+ border-radius: 50%;
+ border: none;
+ box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+ cursor: pointer;
+}
+
+@mixin flexCenter($direction: column, $content: center, $align: center) {
+ display: flex;
+ flex-direction: $direction;
+ justify-content: $content;
+ align-items: $align;
+}

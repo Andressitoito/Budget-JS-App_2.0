@@ -1,0 +1,7 @@
+@import './styles/variables';
+
+body{
+ background-image: linear-gradient(120deg,
+ $--backgrd-clr-1,
+ $--backgrd-clr-2)
+}
