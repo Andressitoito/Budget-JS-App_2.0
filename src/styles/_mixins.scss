@@ -5,12 +5,13 @@
 }
 
 @mixin buttonBase {
- font-size: 1.2rem;
- padding: 0.5em;
  border-radius: 50%;
  border: none;
  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
  cursor: pointer;
+ height: 40px;
+ width: 40px;
+ font-size: 1.5rem;
 }
 
 @mixin flexCenter($direction: column, $content: center, $align: center) {
@@ -18,4 +19,121 @@
  flex-direction: $direction;
  justify-content: $content;
  align-items: $align;
+}
+
+@mixin Modal {
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%) scale(0);
+ z-index: 10;
+}
+
+@mixin generalContainer {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ // width: 40%;
+ // width: 250px;
+ max-width: 280px;
+ height: 235px;
+ margin: 0.5rem auto;
+ border-radius: 30px;
+ padding: 0em 1.5em 0em 1.5em;
+ box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+ font-family: $--ff-text;
+ text-align: center;
+ position: relative;
+ background-image: linear-gradient(120deg,
+   $--backgrd-clr-2,
+   $--backgrd-clr-1);
+}
+
+@mixin generalFormModalContainer {
+ @include generalContainer;
+ width: 40%;
+ width: 250px;
+ max-width: 280px;
+ position: fixed;
+ top: 40%;
+ left: 50%;
+ transform: translate(-50%, -50%) scale(0);
+ z-index: 10;
+
+ &.active {
+  transform: translate(-50%, -50%) scale(1);
+ }
+
+ form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  p {
+   display: block;
+   width: 100%;
+   padding: 1em;
+   margin: 0px auto 1rem;
+   font-size: 1.2rem;
+   border-radius: 20px;
+   background-image: linear-gradient(120deg,
+     $--backgrd-clr-3,
+     $--backgrd-clr-5);
+   color: rgb(71, 64, 71);
+
+   span {
+    margin: .5rem 0 0;
+    display: block;
+    font-size: .9rem;
+    color: $--button-cancel;
+   }
+
+  }
+
+  button {
+   @include buttonBase;
+   padding: .3rem;
+
+   &.btn-close {
+    color: $--button-cancel;
+
+    &:hover {
+     color: #fdedec;
+     background-color: $--button-cancel-hover;
+     box-shadow: 0 0 15px rgba($--backgrd-clr-4, 1);
+     transition: all 0.25s ease;
+    }
+   }
+
+   &.btn-ok {
+    color: $--button-ok;
+
+    &:hover {
+     color: #fdedec;
+     background-color: $--button-ok-hover;
+     box-shadow: 0 0 15px rgba($--backgrd-clr-2, 1);
+     transition: all 0.25s ease;
+    }
+   }
+  }
+
+  input {
+   border: none;
+   border-radius: 5px;
+   padding: 0.5em;
+   text-align: center;
+   font-family: inherit;
+   font-size: 1rem;
+   font-weight: 900;
+   min-width: 200px;
+   width: 90%;
+   display: block;
+   margin: 0 auto 1rem;
+   background-image: linear-gradient(120deg,
+     $--backgrd-clr-input-2,
+     $--backgrd-clr-input-1);
+   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  }
+ }
+
 }

@@ -1,0 +1,22 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.ItemList-container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ width: 40%;
+ min-width: 250px;
+ max-width: 350px;
+ margin: 0.2rem auto;
+ border-radius: 20px;
+ box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+ font-family: var(--ff-text);
+ text-align: center;
+ padding: 1em;
+ gap: 3px;
+ background-image: linear-gradient(120deg,
+     $--backgrd-clr-2,
+     $--backgrd-clr-1);
+}

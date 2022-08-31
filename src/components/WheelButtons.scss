@@ -6,7 +6,6 @@
  overflow-y: scroll;
  height: 190px;
  width: 40px;
- // outline: 3px solid red;
  padding: .4rem;
  border-radius: 50px;
  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -18,13 +17,10 @@
  button {
   @include buttonBase;
   font-size: 1.7rem;
-  height: 40px;
-  width: 40px;
-  padding: 0;
   background-image: linear-gradient(120deg,
     $--backgrd-clr-3,
     $--backgrd-clr-4);
   margin: .25rem 0 .25rem 0;
- box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
  }
 }

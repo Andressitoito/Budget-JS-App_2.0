@@ -1,4 +1,5 @@
 @import '../styles/variables';
+@import '../styles/mixins';
 
 .main-container{
  background-image: linear-gradient(120deg,
@@ -6,5 +7,6 @@
  $--backgrd-clr-2);
  background-size: cover;
  height: 100vh;
+
 }
 

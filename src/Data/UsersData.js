@@ -11,14 +11,14 @@ let AndyData = {
   {
    id: 2,
    item: {
-    name: 'carne',
+    name: 'fruta',
     price: 235
    }
   },
   {
    id: 3,
    item: {
-    name: 'carne',
+    name: 'leche',
     price: 123
    }
   },
@@ -66,7 +66,7 @@ let AndyData = {
   {
    id: 1,
    item: {
-    name: 'tornills',
+    name: 'tornillos',
     price: 230
    }
   },
